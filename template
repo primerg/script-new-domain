@@ -1,0 +1,13 @@
+<VirtualHost  *:8090>
+      ServerName DOMAIN
+      DocumentRoot /var/www/DOMAIN
+      ServerAdmin admin@DOMAIN
+      ErrorLog /var/log/apache2/DOMAIN-error_log
+      CustomLog /var/log/apache2/DOMAIN-access_log combined
+      <Directory "/var/www/DOMAIN">
+         Options +FollowSymLinks -Indexes -ExecCGI
+         AllowOverride All
+         Order Allow,deny
+         Allow from all
+      </Directory>
+</VirtualHost>
